@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-    font-family: "Inconsolata", monospace;
+    font-family: "Merriweather", serif;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -548,7 +548,7 @@ footer a {
     color: black;
     border-style: none;
     font-size: 22px;
-    font-family: "Inconsolata", monospace;
+    font-family: "Merriweather", serif;
     transition: color 0.3s ease;
 }
 
