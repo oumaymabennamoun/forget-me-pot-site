@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-    font-family: "Merriweather", serif;
+    font-family: "Inconsolata", monospace;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -81,7 +81,7 @@ h1 {
     margin: 0;
     font-weight: 550;
     font-size: 33px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Bebas Neue", sans-serif;
     text-align: left;
 }
 
