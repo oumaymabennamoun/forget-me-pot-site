@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const path = require("path");
 
 const app = express();
-const PORT = 4000;
+const PORT = 4001;
 
 app.use(express.static(path.join(__dirname, "public")));
 
