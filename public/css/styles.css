@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #F2F2F2;
+    background-color: #FFFFFF;
     font-family: "Inconsolata", monospace;
     font-size: 22px;
     font-weight: 500;
@@ -180,7 +180,7 @@ main {
     margin-bottom: 0;
 }
 
-.name {
+.pot {
     font-family: "Playfair Display", serif;
     font-size: 72px;
     font-weight: 900;
