@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFFEDE;
+    background-color: #faf0e6;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 500;
@@ -24,11 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-::selection {
-    background: black;
-    color: white;
-}
-
 header {
     color: black;
     background-color: transparent;
@@ -40,14 +35,15 @@ header {
     top: 0;
     left: 0;
     padding: 20px 48px;
-    z-index: 3;
-    transition: background-color 0.3s ease, border-bottom 0.3s ease;
-    transform: translateY(0);
+    z-index: 999;
     width: 100%;
+    transform: translateY(0); 
+    transition: transform 0.3s ease, background-color 0.3s ease, border-bottom 0.3s ease; /* include transform */
 }
 
 h1 {
     margin: 0;
+    color: black;
     font-weight: 550;
     font-size: 40px;
     font-family: "Bebas Neue", sans-serif;
@@ -55,27 +51,14 @@ h1 {
 }
 
 h1 a {
-    color: black;
+    color: white;
     text-decoration: none;
     text-shadow: none;
     transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 h1 a:hover {
-    color: #366636;
-    text-shadow: 0 0 8px #77b077; 
-}
-
-#star {
-    font-size: 37px;
-    position: absolute;  
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    text-align: center;
-    display: inline-block;
-    transition: color 0.3s ease-in-out;
-    text-align: center;        
+    text-shadow: 0 0 8px #ffffff; 
 }
 
 .nav-container {
@@ -99,11 +82,12 @@ nav li {
 }
 
 nav a {
-    color: black;
+    color: white;
     text-shadow: none;
     position: relative; 
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-size: 40px;
 }
 
 nav a:hover {
@@ -111,23 +95,8 @@ nav a:hover {
     text-shadow: 0 0 8px #FA6479;
 }
 
-.h1, #star, .nav-container {
-    width: 33.33%;        
-}
-
-header.scroll {
-    background-color: #366636;
-    border-bottom: 2px solid black;
-}
-
-header.scroll h1 a:hover {
-    color: #F5F5DD;
-    text-shadow: 1px 1px 10px #FAFDF3;
-}
-
-header.scroll nav a:hover {
-    color: #ECC8CC;
-    text-shadow: 0px 0px 2px #BE7B84, 2px 2px 20px #ECC8CC;
+.h1, .nav-container {
+    width: 50%;        
 }
 
 main {
@@ -206,247 +175,6 @@ main {
     display: inline;
 }
 
-.projects {
-    margin-top: 45px !important;
-    color: black;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.return {
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.return:hover {
-    color: #E17D8B;
-    text-shadow: 0 0 8px #FA6479;
-}
-
-.project-1, .project-2 {
-    background-color: rgb(59, 59, 59, 0.08);
-    border: 1px solid #3b3b3b;
-    border-radius: 20px;
-    padding: 20px 30px 10px 30px;
-    margin-top: 35px;
-    width: 650px;
-    position: relative;
-}
-
-.projlink {
-    color: black;
-    transition: color 0.3s ease;
-    font-weight: bold;
-    z-index: 2;
-    position: relative;
-}
-
-.projlink:hover {
-    color: #E17D8B;
-    text-shadow: 0 0 8px #FA6479;
-    z-index: 2;
-}
-
-.project-cursor {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    box-shadow: transparent;
-    z-index: 1;
-    opacity: 0; 
-    transition: opacity 0.1s linear;
-}
-
-.tags {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(253, 111, 130, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    transition: transform 0.3s ease;
-    margin: 4px;
-    z-index: 2;
-    position: relative;
-}
-
-.topic {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(252, 15, 46, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-}
-
-.tags:hover {
-    transform: scale(1.1);
-    z-index: 2;
-}
-
-.status-complete {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(144, 250, 102, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-    z-index: 2;
-    position: relative;
-}
-
-.status-progress {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(250, 197, 100, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-    z-index: 2;
-    position: relative;
-}
-
-.project-page-1 {
-    margin-top: 45px !important;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.project-page-2 {
-    margin-top: 20px !important;
-    text-align: left;
-    margin: 0;
-    padding: 5px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: left; 
-    align-items: flex-start; 
-    justify-content: flex-start; 
-}
-
-.timeline-and-skills {
-    display: flex;
-    flex-direction: row;
-}
-
-.timeline-container-1 {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.timeline-container-2 {
-    width: 50%;
-    height: 100px;
-}
-
-.timeline {
-    border-left: 3px solid black;
-    text-align: left;
-    height: 100%;
-    position: relative;
-    animation: animatedBorder 3s ease-in-out forwards;
-}
-
-@keyframes animatedBorder {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: 100%;
-    }
-}
-
-.timeline-item {
-    position: relative;
-    margin: 20px 0;
-    padding-left: 20px;
-}
-
-.timeline-item:before {
-    content: "";
-    position: absolute;
-    left: -11px;
-    width: 16px;
-    height: 16px;
-    background: #D18E97;
-    border: 3px solid black;
-    border-radius: 50%;
-}
-
-.skills-container {
-    width: 50%;
-}
-
-.skill {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(253, 111, 130, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-}
-
-.tool {
-    color: rgb(0, 0, 0);
-    border: 2px solid black;
-    background: rgba(195, 114, 202, 0.3);
-    border-radius: 20px;
-    padding: 7px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-}
-
-.repository {
-    fill: black;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    transition: fill 0.3s ease, filter 0.3s ease; 
-}
-
-.repository:hover {
-    fill: #E17D8B;
-    filter: 0 0 8px #FA6479;
-}
-
 .image-container {
     display: flex;
     flex-direction: row;
@@ -463,8 +191,6 @@ main {
 footer {
     margin: 0;
     color: black;
-    background-color: #D18E97;
-    border-top: 2px solid black;
     background-image: url("/images/texture.png");
     background-size: cover;
     background-blend-mode: multiply;
@@ -614,7 +340,7 @@ footer a {
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* full viewport height */
     overflow: hidden;
 }
 
@@ -622,11 +348,13 @@ footer a {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;             /* fill the hero container */
+    object-fit: cover;        /* maintain aspect ratio & cover container */
     transform: translate(-50%, -50%);
-    object-fit: cover;
     z-index: 1;
+    filter: brightness(1.55) contrast(1.03) saturate(1.3);
+    max-width: none;          /* remove conflicting max-width */
 }
 
 .hero-overlay {
@@ -646,19 +374,21 @@ footer a {
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 80px; /* clears fixed header */
+    padding: 0 20px; 
 }
 
 .hero-content h2 {
-    font-size: 64px;
+    font-size: clamp(40px, 5vw, 75px); 
+    letter-spacing: 3.5px;
+    font-family: "Bebas Neue", sans-serif;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 25px); 
     margin: 10px 0 20px;
 }
 
 .hero-content img {
-    width: 220px;
+    width: clamp(150px, 20vw, 250px); 
 }
