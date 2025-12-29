@@ -9,12 +9,11 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF;
-    font-family: "Merriweather", serif;
-    font-size: 22px;
+    background-color: #FFFEDE;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    background-image: url("/images/texture.png");
     background-size: cover;
     background-blend-mode: multiply;
     background-repeat: repeat;
@@ -28,36 +27,6 @@ body {
 ::selection {
     background: black;
     color: white;
-}
-
-::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: black;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar-button:single-button {
-    border-style: solid;
-    display: block;
-    height: 10px;
-    width: 12px;
-}
-
-::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-color: transparent transparent black transparent;
-    border-width: 0 8px 8px 8px;
-}
-
-::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-color: black transparent transparent transparent;
-    border-width: 8px 8px 0 8px;
 }
 
 header {
@@ -80,7 +49,7 @@ header {
 h1 {
     margin: 0;
     font-weight: 550;
-    font-size: 33px;
+    font-size: 40px;
     font-family: "Bebas Neue", sans-serif;
     text-align: left;
 }
@@ -93,8 +62,8 @@ h1 a {
 }
 
 h1 a:hover {
-    color: #E17D8B;
-    text-shadow: 0 0 8px #FA6479; 
+    color: #366636;
+    text-shadow: 0 0 8px #77b077; 
 }
 
 #star {
@@ -147,16 +116,13 @@ nav a:hover {
 }
 
 header.scroll {
-    background-color: #D18E97;
+    background-color: #366636;
     border-bottom: 2px solid black;
-    background-image: url("/images/texture.png");
-    background-size: cover;
-    background-blend-mode: multiply;
 }
 
 header.scroll h1 a:hover {
-    color: #ECC8CC;
-    text-shadow: 0px 0px 2px #BE7B84, 2px 2px 20px #ECC8CC;
+    color: #F5F5DD;
+    text-shadow: 1px 1px 10px #FAFDF3;
 }
 
 header.scroll nav a:hover {
@@ -547,8 +513,8 @@ footer a {
     background: transparent;
     color: black;
     border-style: none;
-    font-size: 22px;
-    font-family: "Merriweather", serif;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
     transition: color 0.3s ease;
 }
 
@@ -643,4 +609,56 @@ footer a {
     .project-1, .project-2 {
         width: 300px;
     }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* clears fixed header */
+}
+
+.hero-content h2 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin: 10px 0 20px;
+}
+
+.hero-content img {
+    width: 220px;
 }
