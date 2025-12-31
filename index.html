@@ -30,203 +30,214 @@
                 <div class="hero-content">
                     <h2>Forget Me Pot</h2>
                     <p>Always watered, never high maintenance.</p>
-                    <img src="images/logo.png" alt="Forget Me Pot logo"></img>
+                    <img src="images/logo.png" alt="Forget Me Pot logo">
+
+                    <nav class="hero-nav">
+                        <a href="#why">Why choose Forget Me Pot?</a>
+                        <a href="#how">How does it work?</a>
+                        <a href="#shop">Shop</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#support">Support</a>
+                    </nav>
                 </div>
             </div>
         </section>
-
-
+        
         <main>
+            <section id="home">
+                <h1 id="why">Why Choose Forget Me Pot?</h1>
+                <p>
+                    <i class="ph ph-check"></i>
+                    Adds effortless greenery to hotels, cafés, and homes, enhancing <b>ambiance with zero hassle</b>!
+                <br><br>
+                    <i class="ph ph-check"></i>
+                    Features a <b>compact</b>, <b>sleek</b>, and <b>cable-free</b> design.
+                <br><br>
+                    <i class="ph ph-check"></i>
+                    <b>Eliminates root damage</b> commonly caused by conventional wick watering systems.
+                <br><br>
+                    <i class="ph ph-check"></i>
+                    Enables <b>hands-off</b>, <b>species-specific watering</b> for <b>1 month</b>.
+                <br><br>
+                    <i class="ph ph-check"></i>
+                    Promotes <b>sustainability</b> with energy-saving cycles and smart watering.
+                </p>
 
-    <section id="home">
-        <h1>How Does It Work?</h1>
-        <br>
-        <div class="interests">
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-drop"></i>
+                <br>
+
+                <h1 id="how">How Does It Work?</h1>
+                <br>
+                <div class="elements">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-thermometer-simple"></i>
+                        </div>
+
+                        <div>
+                            <p>The pot includes built-in soil moisture, temperature, humidity, and light sensors.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-circuitry"></i>
+                        </div>
+
+                        <div>
+                            <p>An ESP32 microcontroller continuously processes sensor data and serves as the brain of the system.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-drop"></i>
+                        </div>
+
+                        <div>
+                            <p>Water pumps are automatically activated by the circuit when dry soil is detected.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <p>Water is stored at a reservoir in the bottom of the pot.</p>
+                <div class="elements">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-cloud-rain"></i>
+                        </div>
+
+                        <div>
+                            <p>Reservoir water is evenly distributed throughout the soil via integrated tubing and nozzles along the top edge.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-battery-charging"></i>
+                        </div>
+
+                        <div>
+                            <p>The ESP32 remains in low-power sleep mode between plant checks to conserve energy.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="ph ph-chat-circle"></i>
+                        </div>
+
+                        <div>
+                            <p>Users are notified when the plant requires adjustments to light or temperature.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <br>
+
+                <h1 id="shop">Shop</h1>
+                <section class="shop">
+                <div class="product-card">
+                    <img src="images/pot.png" alt="Forget Me Pot" class="product-img">
+
+                    <h2 class="product-name">Forget Me Pot</h2>
+
+                    <p class="product-desc">
+                        A smart, self-watering plant pot equipped with all the sensors that will keep your plants thriving!
+                    </p>
+
+                    <div class="product-bottom">
+                        <span class="product-price">$130.00</span>
+
+                        <button class="add-to-cart" onclick="addToCart()">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <h1 id="faq">FAQ</h1>
+            <section class="faq">
+                <details class="faq-item">
+                    <summary>How do I set up Forget Me Pot after purchase?</summary>
+                    <p>
+                        Simply <b>snap a photo of your plant</b> using the companion app!
+                        The app identifies the plant species and delivers personalized 
+                        care instructions (watering, temperature, humidity, and light) 
+                        from trusted plant databases.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Do I need to check up on the plant often?</summary>
+                    <p>
+                        Not at all. Forget Me Pot continuously monitors plant conditions and the surrounding environment <b>for you</b>! 
+                        It notifies you when action, such as refilling the water 
+                        reservoir or moving the plant to more suitable light or temperature, is needed. 
+                        <br>
+                        You may select your notification preferences (e.g. phone messages) in the app.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>When do I refill the water reservoir?</summary>
+                    <p>
+                        The reservoir supplies your plant with water for at least <b>1 month</b>, so you 
+                        don't have to worry about frequent refills!
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How is the pot powered?</summary>
+                    <p>
+                        Forget Me Pot avoids messy cables by operating on <b>rechargeable batteries</b>. 
+                        Thanks to the microcontroller's power-saving sleep mode, the pot will last several 
+                        months before the batteries need to be recharged.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Does it need Wi-Fi to function?</summary>
+                    <p>
+                        <b>No Internet connection</b> is required for the pot to keep running. 
+                        The microcontroller's BlueTooth and smart memory features ensure the system remains reliable 
+                        at all times.
+                    </p>
+                </details>
+            </section>
+
+            <h1 id="support">Support</h1>
+            <p>Still have questions? Our team is available to assist with any Forget Me Pot inquiries or troubleshooting.</p>
+            <a href="mailto:concordiaentrepteam@gmail.com" class="contact">
+                <i class="ph ph-envelope-open"></i>
+                <span>Email Us</span>
+            </a>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo">
+                <img src="images/logo.png" alt="Website logo" width ="75">
             </div>
 
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-circuitry"></i>
-                </div>
-
-                <div>
-                    <p>Sensors continuously check the condition and environment of the plant.</p>
-                </div>
+            <div class="copyright">
+                <p>
+                    <br><br>© 2025 Forget Me Pot.
+                </p>
             </div>
+        </footer>
 
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-cpu"></i>
-                </div>
-
-                <div>
-                    <p>Sensor data is sent to the ESP32 microcontroller, the brain of the system.</p>
-                </div>
+        <div id="cart-drawer" class="cart-drawer">
+            <div class="cart-drawer-header">
+                <h2>Your Cart <i class="ph ph-shopping-cart"></i></h2>
+                <button id="close-cart">&times;</button>
             </div>
+            <ul id="cart-items"></ul>
+            <p id="cart-total"></p>
+            <button class="checkout-btn">Checkout</button>
         </div>
 
-        <div class="interests">
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-battery-charging-vertical"></i>
-                </div>
-
-                <div>
-                    <p>The microcontroller stays in a low power sleep mode when it is not checking the plant to conserve energy.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-warning"></i>
-                </div>
-
-                <div>
-                    <p>Built-in pumps are activated when soil is detected as too dry.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="highlight">
-                    <i class="ph ph-cloud-rain"></i>
-                </div>
-
-                <div>
-                    <p>Water is released through small nozzles, evenly across the top of the soil.</p>
-                </div>
-            </div>
-        </div>
-
-        <br>
-        <h1>Why Choose Forget Me Pot?</h1>
-        <p>
-            <i class="ph ph-check"></i>
-            Eliminates root rot from wicking systems.
-        <br><br>
-            <i class="ph ph-check"></i>
-            Tailors plant care according to plant species, rather than using a preset water amount that leads to under- or over-watering.
-        <br><br>
-            <i class="ph ph-check"></i>
-            Allows hands-off plant care for a month due to power conserving property.
-        <br><br>
-            <i class="ph ph-check"></i>
-            Evenly waters plants through the tube and nozzle system instead of drowning the roots.
-        </p>
-
-            <h1>Shop</h1>
-            <section class="shop">
-            <div class="product-card">
-                <img src="images/pot.png" alt="Forget Me Pot" class="product-img">
-
-                <h2 class="product-name">Forget Me Pot</h2>
-
-                <p class="product-desc">
-                    A smart, self-watering plant pot that monitors soil moisture,
-                    optimizes watering, and keeps your plant thriving with minimal effort.
-                </p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$79.99</span>
-
-                    <button class="add-to-cart" onclick="addToCart()">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <h1>FAQ</h1>
-        <section class="faq">
-            <details class="faq-item">
-                <summary>How do I set up Forget Me Pot after purchase?</summary>
-                <p>
-                    Simply <b>snap a photo of your plant</b> using the companion app!
-                    The app identifies the plant species and delivers personalized 
-                    care instructions (watering, temperature, humidity, and light) 
-                    from trusted plant databases.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Do I need to check up on the plant often?</summary>
-                <p>
-                    Not at all. Forget Me Pot continuously monitors plant conditions and the surrounding environment <b>for you</b>! 
-                    It notifies you when action, such as refilling the water 
-                    reservoir or moving the plant to more suitable light or temperature, is needed. 
-                    <br>
-                    You may select your notification preferences (e.g. phone messages) in the app.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>When do I refill the water reservoir?</summary>
-                <p>
-                    The reservoir supplies your plant with water for at least <b>1 month</b>, so you 
-                    don't have to worry about frequent refills!
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>How is the pot powered?</summary>
-                <p>
-                    Forget Me Pot avoids messy cables by operating on <b>rechargeable batteries</b>. 
-                    Thanks to the microcontroller's power-saving sleep mode, the pot will last several 
-                    months before the batteries need to be recharged.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Does it need Wi-Fi to function?</summary>
-                <p>
-                    <b>No Internet connection</b> is required for the pot to keep running. 
-                    The microcontroller's BlueTooth and smart memory features ensure the system remains reliable 
-                    at all times.
-                </p>
-            </details>
-        </section>
-
-        <h1>Support</h1>
-        <p>Still have questions? Our team is available to assist with any Forget Me Pot inquiries or troubleshooting.</p>
-        <a href="mailto:concordiaentrepteam@gmail.com" class="contact">
-            <i class="ph ph-envelope-open"></i>
-            <span>Email Us</span>
-        </a>
-        </section>
-    </main>
-
-    <footer>
-        <div class="logo">
-            <img src="images/logo.png" alt="Website logo" width ="75">
-        </div>
-
-        <div class="copyright">
-            <p>
-                <br><br>© 2025 Forget Me Pot.
-            </p>
-        </div>
-    </footer>
-
-    <div id="cart-drawer" class="cart-drawer">
-        <div class="cart-drawer-header">
-            <h2>Your Cart</h2>
-            <button id="close-cart">&times;</button>
-        </div>
-        <ul id="cart-items"></ul>
-        <p id="cart-total"></p>
-        <button class="checkout-btn">Checkout</button>
-    </div>
-
-    <button id="backToTop" aria-label="Back to top">
-        <i class="ph ph-caret-up"></i>
-    </button>
+        <button id="backToTop" aria-label="Back to top">
+            <i class="ph ph-caret-up"></i>
+        </button>
     
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>

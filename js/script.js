@@ -4,7 +4,7 @@ function addToCart() {
     const product = {
         id: 1,
         name: "Forget Me Pot",
-        price: 79.99,
+        price: 130.00,
         quantity: 1
     };
 
@@ -36,30 +36,54 @@ function openCartDrawer() {
     const drawer = document.getElementById("cart-drawer");
     const itemsList = document.getElementById("cart-items");
     const total = document.getElementById("cart-total");
+    const checkoutBtn = document.getElementById("checkout-btn"); // make sure your button has this ID
 
     itemsList.innerHTML = "";
 
-    cart.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-            <img src="images/pot.png" alt="${item.name}">
-            <div class="item-info">
-                <span class="item-name">${item.name}</span>
-                <span class="item-price">$${(item.price * item.quantity).toFixed(2)}</span>
-            </div>
-            <span>x${item.quantity}</span>
-            <button onclick="removeFromCart(${index})">-</button>
+    if (cart.length === 0) {
+        itemsList.innerHTML = `<li style="color:#222; font-size:16px; text-align:center; padding:40px 0;">
+            <i class="phosphor-icon"></i><br>Your cart is empty
+        </li>`;
+        total.innerHTML = "";
+        if (checkoutBtn) checkoutBtn.style.display = "none";
+    } else {
+        cart.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img src="images/pot.png" alt="${item.name}">
+                <div class="item-info">
+                    <span class="item-name">${item.name}</span>
+                    <span class="item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>
+                <div class="quantity-controls">
+                    <button onclick="decreaseQuantity(${index})">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="increaseQuantity(${index})">+</button>
+                </div>
+            `;
+            itemsList.appendChild(li);
+        });
+
+        const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const gst = subtotal * 0.05;
+        const qst = subtotal * 0.09975;
+        const estimatedTotal = subtotal + gst + qst;
+
+        total.innerHTML = `
+            <div style="color:#222; font-size:16px; margin-bottom:4px;">Subtotal: $${subtotal.toFixed(2)}</div>
+            <div style="color:#555; font-size:14px; margin-bottom:2px;">Estimated taxes:</div>
+            <div style="color:#555; font-size:14px;">GST: $${gst.toFixed(2)}</div>
+            <div style="color:#555; font-size:14px;">QST: $${qst.toFixed(2)}</div>
+            <div style="color:#222; font-size:16px; font-weight:600; margin-top:6px;">Estimated total: $${estimatedTotal.toFixed(2)}</div>
         `;
-        itemsList.appendChild(li);
-    });
+        if (checkoutBtn) checkoutBtn.style.display = "block";
+    }
 
-    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    total.textContent = `Total: $${totalPrice.toFixed(2)}`;
-
+    drawer.querySelector("h2").textContent = "My Cart";
     drawer.classList.add("open");
 }
 
-function removeFromCart(index) {
+function decreaseQuantity(index) {
     if (cart[index].quantity > 1) {
         cart[index].quantity -= 1;
     } else {
@@ -67,7 +91,14 @@ function removeFromCart(index) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartIcon();
-    openCartDrawer(); 
+    openCartDrawer();
+}
+
+function increaseQuantity(index) {
+    cart[index].quantity += 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartIcon();
+    openCartDrawer();
 }
 
 document.getElementById("close-cart").addEventListener("click", () => {
