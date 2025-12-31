@@ -332,27 +332,36 @@ footer a {
     font-size: 16px;
 }
 
-
 .cart a {
-    position: relative;
+    position: relative; 
+    display: inline-block;
 }
 
 .cart a::after {
     content: attr(data-count);
     position: absolute;
-    top: -6px;
-    right: -8px;
+    top: -5px;        
+    right: -5px;      
+    width: 20px;      
+    height: 20px;     
     background: #c00707;
     color: white;
     font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 999px;
-    display: none;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;   
+    text-align: center;
 }
 
 .cart a[data-count]:not([data-count="0"])::after {
-    display: block;
+    display: flex;
 }
+
+
 
 .shop {
     margin-top: 30px;
@@ -476,6 +485,10 @@ footer a {
     color: #366636;
 }
 
+#cart-items {
+    padding-left: 0;
+}
+
 #cart-items li {
     display: flex;
     justify-content: space-between;
@@ -522,6 +535,16 @@ footer a {
     padding: 0;
 }
 
+#cart-items li.empty-message {
+    display: block !important;   
+    width: 100%;                 
+    margin: 0;                  
+    padding: 10px 0;
+    font-size: 16px;
+    color: #222;
+    list-style: none;
+    text-align: left !important; 
+}
 
 #cart-total {
     font-weight: 600;
@@ -571,60 +594,23 @@ header.scrolled .cart-icon {
     box-shadow: 0 0 14px rgba(54, 102, 54, 0.55);
 }
 
-#backToTop {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-
-    background: rgba(54, 102, 54, 0.68);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    border: 1.5px solid rgba(255, 255, 255, 0.28);
-    box-shadow: 0 0 14px rgba(54, 102, 54, 0.55);
-
+.contact-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(10px);
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(54, 102, 54, 0.45);
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;
+    margin: 50px 0;           
+    gap: 10px;                
 }
 
-#backToTop i {
-    font-size: 20px;
-    transition: transform 0.3s ease;
-    color: white;
+#support {
+    margin-top: 0;
 }
 
-#backToTop.show {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-#backToTop:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 0 18px rgba(54, 102, 54, 0.75);
-    background: rgba(54, 102, 54, 0.78);
-}
-
-#backToTop:hover i {
-    transform: translateY(-2px);
+.contact-wrapper {
+    margin-top: 0;       
+    padding-top: 0;      
 }
 
 .hero-nav {
@@ -717,6 +703,61 @@ h1[id] {
     text-align: center;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    background: rgba(54, 102, 54, 0.68);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 0 14px rgba(54, 102, 54, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(54, 102, 54, 0.45);
+}
+
+#backToTop i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 18px rgba(54, 102, 54, 0.75);
+    background: rgba(54, 102, 54, 0.78);
+}
+
+#backToTop:hover i {
+    transform: translateY(-2px);
+}
 
 @media only screen and (max-width: 768px) {
     header {
