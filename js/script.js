@@ -73,6 +73,7 @@ function openCartDrawer() {
     }
 
     drawer.classList.add("open");
+    document.body.classList.add("cart-open"); 
 }
 
 document.getElementById("cart-items").addEventListener("click", (e) => {
@@ -98,6 +99,7 @@ document.getElementById("cart-items").addEventListener("click", (e) => {
 
 document.getElementById("close-cart").addEventListener("click", () => {
     document.getElementById("cart-drawer").classList.remove("open");
+    document.body.classList.remove("cart-open"); 
 });
 
 document.querySelector(".cart a").addEventListener("click", (e) => {

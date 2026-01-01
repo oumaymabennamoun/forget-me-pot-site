@@ -29,7 +29,7 @@
             <div class="hero-overlay">
                 <div class="hero-content">
                     <h2>Forget Me Pot</h2>
-                    <p>Always watered, never high maintenance.</p>
+                    <p>Cultivate Beauty Effortlessly.</p>
                     <img src="images/logo.png" alt="Forget Me Pot logo">
 
                     <nav class="hero-nav">
@@ -48,7 +48,7 @@
                 <h1 id="why">Why Choose Forget Me Pot?</h1>
                 <p>
                     <i class="ph ph-check"></i>
-                    Adds effortless greenery to hotels, cafés, and homes, enhancing <b>ambiance with zero hassle</b>!
+                    Adds low-maintenance greenery to hotels, cafés, and homes, enhancing <b>ambiance with zero hassle</b>!
                 <br><br>
                     <i class="ph ph-check"></i>
                     Features a <b>compact</b>, <b>sleek</b>, and <b>cable-free</b> design.
@@ -141,7 +141,7 @@
                     <h2 class="product-name">Forget Me Pot</h2>
 
                     <p class="product-desc">
-                        A smart, self-watering plant pot equipped with all the sensors that will keep your plants thriving!
+                        A smart, self-watering plant pot equipped with soil moisture, temperature, humidity, and light sensors to keep your plants thriving!
                     </p>
 
                     <div class="product-bottom">
@@ -161,26 +161,16 @@
                     <p>
                         Simply <b>snap a photo of your plant</b> using the companion app!
                         The app identifies the plant species and delivers personalized 
-                        care instructions (watering, temperature, humidity, and light) 
-                        from trusted plant databases.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Do I need to check up on the plant often?</summary>
-                    <p>
-                        Not at all. Forget Me Pot continuously monitors plant conditions and the surrounding environment <b>for you</b>! 
-                        It notifies you when action, such as refilling the water 
-                        reservoir or moving the plant to more suitable light or temperature, is needed. 
+                        care instructions from trusted plant databases.
                         <br>
-                        You may select your notification preferences (e.g. phone messages) in the app.
+                        You may then <b>select your notification preferences</b> (e.g. phone messages) on the app.
                     </p>
                 </details>
 
                 <details class="faq-item">
-                    <summary>When do I refill the water reservoir?</summary>
+                    <summary>How often do I refill the water reservoir?</summary>
                     <p>
-                        The reservoir supplies your plant with water for at least <b>1 month</b>, so you 
+                        The reservoir supplies your plant with water for <b>1 month</b>, so you 
                         don't have to worry about frequent refills!
                     </p>
                 </details>
@@ -189,53 +179,50 @@
                     <summary>How is the pot powered?</summary>
                     <p>
                         Forget Me Pot avoids messy cables by operating on <b>rechargeable batteries</b>. 
-                        Thanks to the microcontroller's power-saving sleep mode, the pot will last several 
-                        months before the batteries need to be recharged.
+                        By activating the water pumps only when needed and using the ESP32's power-saving mode, the pot can run for several months before the batteries need a recharge.
                     </p>
                 </details>
 
                 <details class="faq-item">
                     <summary>Does it need Wi-Fi to function?</summary>
                     <p>
-                        <b>No Internet connection</b> is required for the pot to keep running. 
-                        The microcontroller's BlueTooth and smart memory features ensure the system remains reliable 
-                        at all times.
+                        <b>No Internet connection</b> is required for the pot to keep running. All watering logic runs locally on the ESP32.
                     </p>
                 </details>
             </section>
 
             <h1 id="support">Support</h1>
             <div class="contact-wrapper">
-                <p>Still have questions? Our team is available to assist!</p>
+                <p>Still have questions? Our team is here to assist you!</p>
                 <a href="mailto:concordiaentrepteam@gmail.com" class="contact">
                     <i class="ph ph-envelope-open"></i>
                     <span>Email Us</span>
                 </a>
             </div>
-            </section>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <div class="logo">
-                <img src="images/logo.png" alt="Website logo" width ="75">
-            </div>
-
-            <div class="copyright">
-                <p>
-                    <br><br>© 2025 Forget Me Pot.
-                </p>
-            </div>
-        </footer>
-
-        <div id="cart-drawer" class="cart-drawer">
-            <div class="cart-drawer-header">
-                <h2>Your Cart <i class="ph ph-shopping-cart"></i></h2>
-                <button id="close-cart">&times;</button>
-            </div>
-            <ul id="cart-items"></ul>
-            <p id="cart-total"></p>
-            <button class="checkout-btn">Checkout</button>
+    <footer>
+        <div class="logo">
+            <img src="images/logo.png" alt="Website logo" width ="75">
         </div>
+
+        <div class="copyright">
+            <p>
+                <br><br>© 2025 Forget Me Pot.
+            </p>
+        </div>
+    </footer>
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h2>Your Cart <i class="ph ph-shopping-cart"></i></h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <ul id="cart-items"></ul>
+        <p id="cart-total"></p>
+        <button class="checkout-btn">Checkout</button>
+    </div>
 
     <button id="backToTop" aria-label="Back to top">
         <i class="ph ph-caret-up"></i>
